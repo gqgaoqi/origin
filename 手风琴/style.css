@@ -1,0 +1,52 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Î¢ÈíÑÅºÚ";
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+.pic{
+    width: 1100px;
+    height:430px;
+    margin-top: 70px;
+}
+.pic ul li{
+    float:left;
+    width: 100px;
+    height:429px;
+}
+.pic1{
+    background-image: url("img/1.jpg");
+}
+.pic2{
+    background-image: url("img/2.jpg");
+}
+.pic3{
+    background-image: url("img/3.jpg");
+}
+.pic ul .pic4{
+    background-image: url("img/4.jpg");
+    width:789px;
+}
+.txt{
+    background-color:#000 ;
+    background: rgba(0,0,0,0.5);
+    height:429px ;
+    width: 100px;
+}
+.txt p{
+    float: left;
+    color:#fff;
+}
+.txt .p1{
+    font-size: 12px;
+    width: 12px;
+    padding: 25px 25px 0px 20px;
+}
+.txt .p2{
+    font-size: 14px;
+    width:14px;
+    margin-top: 25px;
+}

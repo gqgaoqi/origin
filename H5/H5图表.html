@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>线图 雷达图</title>
+		<script src="Chart.js"></script>
+		<style>
+			canvas{
+				border:1px solid red;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="cv" width="600" height="400" ></canvas>
+		<canvas id="cv1" width="600" height="600" ></canvas>
+		<canvas id="cvv" width="600" height="600" ></canvas>
+		<canvas id="cvc" width="600" height="600" ></canvas>
+		<canvas id="cv2" width="600" height="600" ></canvas>
+	<script>
+
+		var t=document.getElementById('cv');
+		var ctx=t.getContext('2d');
+		var dt={
+			labels:["一年级","二年级","三年级"],
+			datasets:[
+			{data:[20,50,30],
+			//fillColor:"rgba(0,0,0,0)",
+			strokeColor:"rgba(255,0,0,0.7)",
+			pointColor:"rgba(0,0,0,0.5)", //点的颜色
+			},
+			{data:[30,20,40],
+			//fillColor:"rgba(0,0,0,0)",
+			strokeColor:"rgba(0,255,0,0.7)",
+			piontColor:"rgba(0,0,0,0.7)",
+			
+		},
+		]
+		}
+		var op={datasetFill:false}
+		new Chart(ctx).Line(dt,op);
+
+		//雷达图
+		var t1=document.getElementById('cv1');
+		var ctx1=t1.getContext('2d');
+		var dt1={
+			labels:["交际","管理","技术","胭脂","智商","情商"],
+			datasets:[{
+				data:[30,40,20,40,60,50],
+				fillColor:"rgba(266,0,0,.5)",
+
+			}]
+		}
+		var op1={datasetFill:false};
+		new Chart(ctx1).Radar(dt1,op1);
+
+		//饼状图
+		var t2=document.getElementById('cvv');
+		var ctx2=t2.getContext('2d');
+		var dt2=[
+			{value:30,color:"rgba(255,0,0,0.5)"},
+			{value:20,color:"rgba(0,345,0,0.5)"},
+			{value:30,color:"rgba(123,0,0,0.5)"},
+			{value:50,color:"rgba(0,456,0,0.5)"},
+			{value:10,color:"rgba(0,0,123,0.5)"},
+			];
+		var op2={segmentStrokeColor:"#f0f"};
+		new Chart(ctx2).Pie(dt2,op2);
+
+		//环形图
+		var t3=document.getElementById('cvc');
+		var ctx3=t3.getContext('2d');
+		var dt3=[
+			{value:20,color:"rgba(255,0,0,0.6)"},
+			{value:30,color:"rgba(255,123,0,0.6)"},
+			{value:50,color:"rgba(234,0,234,0.6)"},
+			{value:40,color:"rgba(0,234,255,0.6)"},
+			{value:60,color:"rgba(0,2550,0,0.6)"},
+		]
+		var op3={percentageInnerCutout:20,
+			animation:true,
+			animateRotate:true,
+		}
+		new Chart(ctx3).Doughnut(dt3,op3);
+
+		//极地
+		var t3=document.getElementById('cv2');
+		var ctx3=t3.getContext('2d');
+		var dt3=[
+			{value:40,color:"rgba(255,0,0,0.6)"},
+			{value:20,color:"rgba(255,123,0,0.6)"},
+			{value:10,color:"rgba(234,0,234,0.6)"},
+			{value:60,color:"rgba(0,234,255,0.6)"},
+			{value:50,color:"rgba(0,2550,0,0.6)"},
+		]
+		var op3={percentageInnerCutout:20,
+			animation:true,
+			animateRotate:true,
+			scaleBackdropColor:"#f0f",
+		}
+		new Chart(ctx3).PolarArea(dt3,op3);
+	</script>
+	</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>练习</title>
+		<script src="Chart.js"></script>
+	</head>
+	<body>
+		<canvas id="cv" width="600" height="400" style="border:1px solid #f00;"></canvas>
+	<script>
+		
+			var t=document.getElementById('cv');
+			var ctx=t.getContext('2d');
+			
+			//1先创建一个新对象
+			var dt={
+				//横轴
+
+				labels:["一月份","二月份","三月份"],
+				//纵轴
+				datasets:[
+					{data:[30,60,40],
+						fillColor:"rgba(255,0,0,0.5)",
+						strokeColor:"rgba(255,0,0,0.7)"
+					},
+					{data:[40,30,40],
+						fillColor:"rgba(0,255,0,0.5)",
+						strokeColor:"rgba(0,255,0,0.7)"
+					},
+
+				]
+			};
+			var op={
+				scaleLabel:"给你<%=value%>k",
+				scaleLineColor:"#f00",
+				//修改间距 取消动画 左边文本单位 文本 字体 字体大小 参考线颜色 粗细
+
+			}
+			new Chart(ctx).Bar(dt,op)
+	</script>
+	</body>
+
+</html>

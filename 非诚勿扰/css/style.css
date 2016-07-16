@@ -1,0 +1,106 @@
+@charset "utf-8";
+*{
+	margin:0;
+	padding:0;
+	list-style:none;
+	}
+body{
+	font-family:"微软雅黑";
+	}
+float{
+	float:left;
+	}
+float{
+	float:right;
+	}
+clear{
+	clear:both;
+	}
+#banner{
+	width:1600px;
+	height:576px;
+	margin:0 auto;
+	background:
+	url(../images/banner.jpg) no-repeat center;
+	position:relative;
+	}
+#banner a.p{
+	display:inline-block;
+	width:457px;
+	height:98px;
+	background:url(../images/down.png) no-repeat center;
+	position:absolute;
+	bottom:42px;
+	left:315px;
+	}
+#text {
+	width:1002px;
+	height:95px;
+	background:
+	url(../images/line.gif) repeat-x center bottom;
+	margin:0 auto;
+	overflow:hidden;  
+	}
+#weibo{
+	width:817px;
+	height:40px;
+	float:left;
+	background:url(../images/weibo_text.png) no-repeat;
+	margin-top:27px;
+	}
+#text a.btn{
+	width:152px;
+	height:42px;
+	background:url(../images/weibo_btn.png) no-repeat;
+	float:right;
+	margin-top:29px;
+	}
+#phone{
+	overflow:hidden;
+	margin:0 auto;
+	width:1002px;
+
+	}
+	/************* 公共样式***************/	
+.zhuce{
+	width:1002px;
+	height:394px;
+	float:left;
+	}
+.zhuce .s1 p{
+	width:208px;
+	height:62px;
+	margin-bottom:10px;
+	}	
+.zhuce .s1{
+	width:395px;
+	float:right;
+	margin-top:120px;
+	}
+.zhuce .s1 span{
+	line-height:25px;
+	}
+/************************************/	
+.friend {
+	width:1002px;
+	height:414px;
+	float:right;
+	}
+.friend>img{
+	float:right;
+	}	
+.friend .s2{
+	overflow:hidden;
+	width:395px;
+	} 	
+.friend .s2 p{
+	width:208px;
+	height:62px;
+	margin-top:130px;
+	}
+#footer{
+	width:1600px;
+	height:350px;
+	background:url(../images/footer.png) no-repeat;
+	margin:0 auto;
+	}
